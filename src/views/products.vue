@@ -1,8 +1,9 @@
 <template>
+  <button @click="change1">tops</button>
   <div v-if="products" class="prods">
     <productsCard
       class="card"
-      v-for="product in products"
+      v-for="product in filteredproducts"
       :key="product.id"
       :product="product"
     />
@@ -11,14 +12,38 @@
 <script>
 import productsCard from "../components/productsCard.vue";
 export default {
+  components: { productsCard },
+  data() {
+    return {
+      search: "",
+      // products: [],
+    };
+  },
   computed: {
+    filteredproducts() {
+      return this.$store.state.products?.filter((product) => {
+        return product.category
+          ?.toLowerCase()
+          .includes(this.search.toLowerCase());
+      });
+    },
     products() {
       return this.$store.state.products;
     },
   },
-  components: { productsCard },
   mounted() {
     this.$store.dispatch("getproducts");
+  },
+  methods: {
+    Change1() {
+      this.search = "tops";
+    },
+    Change2() {
+      this.search = "bottoms";
+    },
+    Change3() {
+      this.search = "accessories";
+    },
   },
 };
 </script>

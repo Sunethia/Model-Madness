@@ -65,26 +65,24 @@ export default createStore({
     },
     register: async (context, data) => {
       const {
-        full_name,
+      fullname,
         email,
         password,
-        billing_address,
-        default_shipping_address,
-        country,
-        phone,
-        user_type,
+        userrole,
+        phone_number,
+        join_date,
+        cart
       } = data;
       fetch("https://model-madness.herokuapp.com/users/register", {
         method: "POST",
         body: JSON.stringify({
-          full_name: full_name,
+          fullname: fullname,
           email: email,
           password: password,
-          billing_address: billing_address,
-          default_shipping_address: default_shipping_address,
-          country: country,
-          phone: phone,
-          user_type: user_type,
+          userrole:userrole,
+          phone_number: phone_number,
+          join_date:join_date,
+         cart
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -107,29 +105,29 @@ export default createStore({
   deleteProduct: async (context, id) => {
     fetch("https://model-madness.herokuapp.com/products/" + id, {
       method: "DELETE",
-    }).then(() => context.dispatch("getProducts"));
+    }).then(() => context.dispatch("getproducts"));
   },
-  createProduct: async (context, Product) => {
+  createProduct: async (context, product) => {
     fetch("https://model-madness.herokuapp.com/products/", {
       method: "POST",
-      body: JSON.stringify(Product),
+      body: JSON.stringify(product),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
       .then((response) => response.json())
-      .then(() => context.dispatch("getProducts"));
+      .then(() => context.dispatch("getproducts"));
   },
-  updateProduct: async (context, Product) => {
-    fetch("https://model-madness.herokuapp.com/products/" + Product.id, {
+  updateProduct: async (context, product) => {
+    fetch("https://model-madness.herokuapp.com/products/" + product.id, {
       method: "PUT",
-      body: JSON.stringify(Product),
+      body: JSON.stringify(product),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
       .then((response) => response.json())
-      .then(() => context.dispatch("getProducts"));
+      .then(() => context.dispatch("getproducts"));
   },
   modules: {},
 });
