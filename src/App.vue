@@ -1,14 +1,16 @@
 <template>
   <navbar />
+  <footer />
   <router-view></router-view>
 </template>
 <script>
 import navbar from "./components/navbar.vue";
-
+import footer from "./components/footer.vue";
 export default {
   name: "App",
   components: {
     navbar,
+    footer,
   },
 };
 </script>
@@ -18,7 +20,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #bc6c25;
+  background-color: rgb(40, 75, 99);
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

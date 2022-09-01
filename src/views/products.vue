@@ -51,6 +51,7 @@ export default {
 h1 {
   font-size: 5rem;
   color: black;
+  
 }
 .prods {
   padding: 20px;

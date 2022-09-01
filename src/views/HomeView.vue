@@ -45,34 +45,14 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img
-                  src="../assets/pinkdress.webp"
+                  src="../assets/cap.webp"
                   alt="dress"
                   style="width: 300px; height: 300px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
-                  src="../assets/pinkdress2.webp"
-                  alt="dress"
-                  style="width: 300px; height: 300px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img
-                  src="../assets/bluedress.webp"
-                  alt="Avatar"
-                  style="width: 300px; height: 300px"
-                />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="../assets/bluedress2.webp"
+                  src="../assets/cap2.webp"
                   alt="dress"
                   style="width: 300px; height: 300px"
                 />
@@ -85,14 +65,34 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img
-                  src="../assets/silverdress.webp"
+                  src="../assets/highwaist.webp"
                   alt="Avatar"
                   style="width: 300px; height: 300px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
-                  src="../assets/silverdress2.webp"
+                  src="../assets/highwaist2.webp"
+                  alt="dress"
+                  style="width: 300px; height: 300px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="../assets/top.webp"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px"
+                />
+              </div>
+              <div class="flip-card-back">
+                <img
+                  src="../assets/top2.webp"
                   alt="dress"
                   style="width: 300px; height: 300px"
                 />
@@ -102,9 +102,59 @@
         </div>
       </div>
     </div>
-    <div class="featured">
-      <div class="col"></div>
-      <div class="col"></div>
+    <div class="sale">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 30rem">
+            <img
+              src="../assets/bluejersey.webp"
+              class="card-img-top"
+              alt="sale"
+            />
+            <div class="card-body">
+              <h5 class="card-title">SALE!</h5>
+              <p class="card-text">Sale on all cardigans From R100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 30rem">
+            <img
+              src="../assets/browndressboobtube.webp"
+              class="card-img-top"
+              alt="sale"
+            />
+            <div class="card-body">
+              <h5 class="card-title">SALE!</h5>
+              <p class="card-text">Sale on all basics From R100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pictures">
+      <div class="row">
+        <div class="col">
+          <img src="../assets/phonecases.webp" class="casses" />
+        </div>
+        <div class="col"><h2>Phonecases Range Launching soon!</h2></div>
+      </div>
+    </div>
+    <div class="stylegallery">
+      <h1>Style Gallery</h1>
+      <div class="row">
+        <div class="col">
+          <img src="../assets/style1.webp" class="style" />
+        </div>
+        <div class="col">
+          <img src="../assets/style2.webp" class="style" />
+        </div>
+        <div class="col"><img src="../assets/style3.webp" class="style" /></div>
+        <div class="col"><img src="../assets/style4.webp" class="style" /></div>
+        <div class="col"><img src="../assets/style5.webp" class="style" /></div>
+      </div>
     </div>
   </div>
 </template>
@@ -112,14 +162,15 @@
 <script></script>
 <style scoped>
 .home {
-  background-color: #bc6c25;
+  background-color: rgb(40, 75, 99);
 }
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #bc6c25;
+  background-color: rgb(40, 75, 99);
+  margin-bottom: 5rem;
 }
 
 li {
@@ -137,6 +188,7 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
   display: inline;
+  background-color: rgb(40, 75, 99);
 }
 
 li a:hover {
@@ -147,10 +199,45 @@ a {
   justify-content: center;
   align-items: center;
 }
+.card {
+  margin-bottom: 3rem;
+}
 
 h1 {
   color: white;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Arsenal";
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+h2 {
+  color: white;
+  font-family: "Arsenal";
+  margin-top: 15rem;
+}
+.best {
+  margin-bottom: 200px;
+}
+.stylegallery.row {
+  display: flex;
+}
+.col-img {
+  height: 25rem;
+  width: 25rem;
+}
+.casses {
+  width: 40rem;
+  box-shadow: 5px 5px 5px 5px white;
+}
+.style {
+  width: 15rem;
+  height: 15rem;
+  box-shadow: 5px 5px 5px 5px white;
+}
+.sale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
 /* Flip card css */
 .flip-card {
@@ -199,4 +286,14 @@ h1 {
   transform: rotateY(180deg);
 }
 /* end of flip card */
+.caro {
+  height: 200px;
+  width: 200px;
+}
+.carousel-item {
+  height: 486px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>

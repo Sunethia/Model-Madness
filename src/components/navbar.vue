@@ -4,7 +4,8 @@
       <li><a href="/">Home</a></li>
       <li><a href="about">About</a></li>
       <li><a href="products">Products</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="register">Register</a></li>
+      <li><a href="login">Login</a></li>
     </ul>
   </div>
 </template>
@@ -16,6 +17,7 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 ul {
   list-style-type: none;
@@ -30,7 +32,8 @@ li {
 }
 a {
   padding: 2rem;
-  color: white;
+  color: black;
+  background-color: white;
 }
 li a:hover {
   background-color: rgb(40, 54, 24);
