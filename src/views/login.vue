@@ -1,7 +1,7 @@
 <template>
   <div class="login container">
-    <h1>Login</h1>
     <form @submit="login">
+      <h1>Login</h1>
       <label for="email" class="form-label">Email</label>
       <input
         type="email"
@@ -57,19 +57,19 @@ export default {
   align-items: center;
 }
 form {
-  box-shadow: 5px 5px 5px 5px lightsalmon;
+  box-shadow: 5px 5px 5px 5px black;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20vw;
-  height: 50vh;
+  width: 30vw;
+  height: 70vh;
   gap: 10px;
-  background: salmon;
+  background: rgb(40, 75, 99);
 }
 .form-input {
-  width: 200px;
+  width: 150px;
   border: none;
   border-radius: 5px;
   height: 30px;
@@ -89,7 +89,7 @@ form {
   border: none;
   border-radius: 5px;
   height: 30px;
-  background: white;
+  background: rgb(40, 75, 99);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,6 +113,9 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.form-control {
+  background-color: rgb(40, 75, 99);
 }
 </style>
 <!-- 9:01 register 9:02

@@ -80,8 +80,8 @@ export default {
 }
 form {
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px lightsalmon;
-  background: salmon;
+  box-shadow: 5px 5px 5px 5px black;
+  background: rgb(40, 75, 99);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,5 +143,8 @@ hr {
 }
 .user-type {
   display: none;
+}
+a {
+  margin-top: 5rem;
 }
 </style>

@@ -51,7 +51,6 @@ export default {
 h1 {
   font-size: 5rem;
   color: black;
-  
 }
 .prods {
   padding: 20px;
@@ -67,6 +66,8 @@ h1 {
 .prods a {
   text-decoration: none;
   color: black;
+  width: 300px;
+  height: 400px;
 }
 .image {
   height: 170px;

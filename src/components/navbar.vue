@@ -6,6 +6,9 @@
       <li><a href="products">Products</a></li>
       <li><a href="register">Register</a></li>
       <li><a href="login">Login</a></li>
+      <li><a href="admin">Admin</a></li>
+      <i class="fa-solid fa-user"></i>
+      <i class="fa-solid fa-bag-shopping"></i>
     </ul>
   </div>
 </template>
@@ -34,11 +37,21 @@ a {
   padding: 2rem;
   color: black;
   background-color: white;
+  font-size: 1rem;
+  font-family: "Bangers";
 }
 li a:hover {
   background-color: rgb(40, 54, 24);
 }
 .active {
+  background-color: rgb(40, 54, 24);
+}
+i {
+  font-size: 1.5rem;
+  background-color: white;
+  padding-right: 2rem;
+}
+i:hover {
   background-color: rgb(40, 54, 24);
 }
 </style>

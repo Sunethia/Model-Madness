@@ -16,10 +16,13 @@ export default {
 </script>
 <style>
 .card {
-  box-shadow: 5px 5px 5px 5px lightsalmon;
+  box-shadow: 5px 5px 5px 5px black;
   border-radius: 10px;
-  width: 300px;
+  width: 250px;
   height: 300px;
+}
+.card:hover {
+  background-color: black;
 }
 .product_imgURL {
   height: 200px;
@@ -27,5 +30,8 @@ export default {
 }
 .product_price {
   margin: none;
+}
+p {
+  background-color: white;
 }
 </style>

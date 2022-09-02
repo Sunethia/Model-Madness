@@ -41,7 +41,14 @@
         </div>
         <div class="divider"></div>
         <div class="name">Chanique Mansoor</div>
-        <div class="title"></div>
+        <div class="title">
+          I am so delighted in your clothing! It is absolutely
+          gorgeous...everything I have ordered FITS PERFECTLY...my fiance has
+          told me how beautiful I look in the outfits I have purchased, as well
+          as receiving many other compliments on the quality of your clothing
+          lines from friends and family! I am so happy I have found you...and I
+          will continue to purchase from you all! Thank you so very much!
+        </div>
       </div>
       <div class="person">
         <div class="container">
@@ -51,7 +58,48 @@
         </div>
         <div class="divider"></div>
         <div class="name">Cameron Tamboer</div>
-        <div class="title"></div>
+        <div class="title">
+          I have ordered and received several items now, and I have to say, I am
+          in love with this store!!!! Everything I have received fit perfectly,
+          and is good quality. I ordered clothes in my size and they were true
+          to size! I would not hesitate to shop this site again, and I tell all
+          of my friends and family to shop this site too!
+        </div>
+      </div>
+      <div class="person">
+        <div class="container">
+          <div class="container-inner">
+            <img class="circle" src="../assets/zach.jpg" />
+            <img class="img img2" src="" />
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="name">Zachary Williams</div>
+        <div class="title">
+          I was reminiscing on what to get my fiance for her birthday. I came
+          down on this store and ordered a few items ,which i thought she might
+          like. I have received the items and she was over the moon about the
+          clothing and told me I have great style, so thank you for helping me
+          choose something special. Keep up the good work.
+        </div>
+      </div>
+      <div class="person">
+        <div class="container">
+          <div class="container-inner">
+            <img class="circle" src="../assets/mary.jpg" />
+            <img class="img img2" src="" />
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="name">Mary Poppins</div>
+        <div class="title">
+          I just received my shirts in TWO days I am incredibly happy with your
+          quickness and the beautiful clothes! I will be shopping through you
+          again in the very near future and will recommend you to everyone I
+          know! So very happy I found your website after hours of searching for
+          something stylish and festive for the holidays Thank you again Super
+          Happy :)
+        </div>
       </div>
     </div>
   </div>
@@ -69,15 +117,18 @@ h1 {
   font-family: "Arsenal";
   color: white;
 }
+
 h3 {
   font-size: 2rem;
   font-family: "Arsenal";
   color: white;
   display: inline;
 }
+
 div.name {
   color: white;
 }
+
 /* sliders styles */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
 body {

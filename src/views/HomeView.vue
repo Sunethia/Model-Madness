@@ -26,14 +26,14 @@
               <div class="flip-card-front">
                 <img
                   src="../assets/browndress.webp"
-                  alt="dress"
+                  class="dress"
                   style="width: 300px; height: 300px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
                   src="../assets/browndress2.webp"
-                  alt="dress"
+                  class="dress"
                   style="width: 300px; height: 300px"
                 />
               </div>
@@ -46,14 +46,14 @@
               <div class="flip-card-front">
                 <img
                   src="../assets/cap.webp"
-                  alt="dress"
+                  class="cap"
                   style="width: 300px; height: 300px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
                   src="../assets/cap2.webp"
-                  alt="dress"
+                  class="cap"
                   style="width: 300px; height: 300px"
                 />
               </div>
@@ -66,14 +66,14 @@
               <div class="flip-card-front">
                 <img
                   src="../assets/highwaist.webp"
-                  alt="Avatar"
+                  class="jean"
                   style="width: 300px; height: 300px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
                   src="../assets/highwaist2.webp"
-                  alt="dress"
+                  class="jean"
                   style="width: 300px; height: 300px"
                 />
               </div>
@@ -86,14 +86,14 @@
               <div class="flip-card-front">
                 <img
                   src="../assets/top.webp"
-                  alt="Avatar"
+                  class="top"
                   style="width: 300px; height: 300px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
                   src="../assets/top2.webp"
-                  alt="dress"
+                  class="top"
                   style="width: 300px; height: 300px"
                 />
               </div>
@@ -202,6 +202,9 @@ a {
 .card {
   margin-bottom: 3rem;
 }
+.card-body {
+  height: 15rem;
+}
 
 h1 {
   color: white;
@@ -223,21 +226,65 @@ h2 {
 .col-img {
   height: 25rem;
   width: 25rem;
+  box-shadow: 2px 2px 2px 2px black;
 }
 .casses {
   width: 40rem;
-  box-shadow: 5px 5px 5px 5px white;
+  box-shadow: 5px 5px 5px 5px black;
 }
 .style {
   width: 15rem;
   height: 15rem;
-  box-shadow: 5px 5px 5px 5px white;
+  box-shadow: 5px 5px 5px 5px black;
+}
+.card-img-top:hover {
+  background-color: black;
 }
 .sale {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
+}
+.sale:hover {
+  background-color: black;
+}
+
+.card-body {
+  box-shadow: 5px 5px 5px 5px black;
+}
+.dress {
+  box-shadow: 5px 5px 5px 5px black;
+  padding-left: 2rem;
+}
+.dress:hover {
+  background-color: black;
+}
+.cap {
+  box-shadow: 5px 5px 5px 5px black;
+}
+.cap:hover {
+  background-color: black;
+}
+.jean {
+  box-shadow: 5px 5px 5px 5px black;
+}
+.jean:hover {
+  background-color: black;
+}
+.top {
+  box-shadow: 5px 5px 5px 5px black;
+}
+.top:hover {
+  background-color: black;
+}
+.card-title {
+  font-size: 4rem;
+  color: white;
+}
+.card-text {
+  font-size: 2rem;
+  color: white;
 }
 /* Flip card css */
 .flip-card {
