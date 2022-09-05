@@ -7,16 +7,26 @@ export default createStore({
     token: null,
     products: null,
     product: null,
+    cart: [],
   },
   getters: {},
   mutations: {
+    setCart(state, cart) {
+      state.cart = cart;
+    },
+    updateCart: (state, product) => {
+      state.cart.push(product);
+    },
+    removeFromCart: (state, cart) => {
+      state.cart = cart;
+    },
     settoken: (state, token) => {
       state.token = token;
     },
     setusers: (state, users) => {
       state.users = users;
     },
-    setuser: (state, user) => {
+    setser: (state, user) => {
       state.user = user;
     },
     setproducts: (state, products) => {
@@ -25,12 +35,50 @@ export default createStore({
     setproduct: (state, product) => {
       state.product = product;
     },
+    Logout(state) {
+      (state.user = ""), (state.token = "");
+    },
   },
   actions: {
+    //cart
+    getCart: async (context) => {
+      fetch(`https://model-madness.herokuapp.com/products`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.length === 0) {
+            console.log(data);
+          } else {
+            context.commit("setProducts", data);
+            // console.log(data);
+          }
+        });
+    },
+    addToCart: async (context, id) => {
+      console.log(id);
+    },
+    deleteFromCart: async (context, id) => {
+      const newCart = context.state.cart.filter((product) => product.id != id);
+      swal({
+        title: "Are you sure you want to remove this item?",
+        text: "",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willDelete) => {
+        if (willDelete) {
+          swal("Removed from cart", {
+            icon: "success",
+          });
+        }
+      });
+      context.commit("removeFromCart", newCart);
+    },
+    //logout
     logout: async (context) => {
       context.commit("setusers", null);
       window.location = "/login";
     },
+    //login
     login: async (context, payload) => {
       let res = await fetch("https://model-madness.herokuapp.com/users/login", {
         method: "POST",
@@ -57,21 +105,23 @@ export default createStore({
           .then((res) => res.json())
           .then((data) => {
             context.commit("setuser", data.user);
-            router.push("/products");
+            router.push("/products", alert("Successfully Logged In:"));
           });
       } else {
         alert(data);
       }
     },
+
+    //register
     register: async (context, data) => {
       const {
-      fullname,
+        fullname,
         email,
         password,
         userrole,
         phone_number,
         join_date,
-        cart
+        cart,
       } = data;
       fetch("https://model-madness.herokuapp.com/users/register", {
         method: "POST",
@@ -79,10 +129,10 @@ export default createStore({
           fullname: fullname,
           email: email,
           password: password,
-          userrole:userrole,
+          userrole: userrole,
           phone_number: phone_number,
-          join_date:join_date,
-         cart
+          join_date: join_date,
+          cart,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -91,6 +141,7 @@ export default createStore({
         .then((response) => response.json())
         .then((json) => context.commit("setusers", json));
     },
+    //products
     getproducts: async (context) => {
       fetch("https://model-madness.herokuapp.com/products")
         .then((res) => res.json())
@@ -129,5 +180,6 @@ export default createStore({
       .then((response) => response.json())
       .then(() => context.dispatch("getproducts"));
   },
+
   modules: {},
 });

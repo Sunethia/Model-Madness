@@ -229,4 +229,8 @@ body {
   font-style: italic;
   margin-top: 4px;
 }
+/* media queries */
+@media (min-width:1200 ) and (max-width:1287px) {
+  
+}
 </style>

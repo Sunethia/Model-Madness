@@ -7,8 +7,9 @@
       <li><a href="register">Register</a></li>
       <li><a href="login">Login</a></li>
       <li><a href="admin">Admin</a></li>
-      <i class="fa-solid fa-user"></i>
-      <i class="fa-solid fa-bag-shopping"></i>
+      <li><a href="contact">Contact</a></li>
+      <!-- <i class="fa-solid fa-user"></i>
+      <i class="fa-solid fa-bag-shopping"><a href="Cart"></a></i> -->
     </ul>
   </div>
 </template>

@@ -1,22 +1,6 @@
 <template>
   <div class="home">
-    <div class="things">
-      <ul>
-        <li><a href="">New In</a></li>
-
-        <li><a href="">Accessories</a></li>
-
-        <li><a href="">Tops</a></li>
-
-        <li><a href="">Bottoms</a></li>
-
-        <li><a href="">Dresses</a></li>
-
-        <li><a href="">Shoes</a></li>
-
-        <li><a href="">Underwear</a></li>
-      </ul>
-    </div>
+    <h1>Welcome to Model-madness!</h1>
     <div class="best">
       <h1>Best Sellers for Last Week</h1>
       <div class="row">
@@ -128,18 +112,20 @@
             />
             <div class="card-body">
               <h5 class="card-title">SALE!</h5>
-              <p class="card-text">Sale on all basics From R100</p>
+              <p class="card-text">Sale on all day basics From R100</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="pictures">
-      <div class="row">
-        <div class="col">
-          <img src="../assets/phonecases.webp" class="casses" />
+    <div class="container">
+      <div class="pictures">
+        <div class="row">
+          <div class="col">
+            <img src="../assets/phonecases.webp" class="casses" />
+          </div>
+          <div class="col"><h2>Phonecases Range Launching soon!</h2></div>
         </div>
-        <div class="col"><h2>Phonecases Range Launching soon!</h2></div>
       </div>
     </div>
     <div class="stylegallery">
@@ -207,10 +193,13 @@ a {
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   font-family: "Arsenal";
-  margin-top: 3rem;
-  margin-bottom: 4rem;
+
+  margin-left: 25rem;
 }
 h2 {
   color: white;
@@ -289,17 +278,17 @@ h2 {
 /* Flip card css */
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 200px;
+  width: 15rem;
+  height: 15rem;
   border: 1px 1px 1px solid #dab49d;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  /* perspective: 1000px; Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 15rem;
+  height: 15rem;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -314,8 +303,8 @@ h2 {
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 15rem;
+  height: 15rem;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -342,5 +331,90 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* media queries */
+@media (min-width: 1200px) and (max-width: 1286px) {
+  .flip-card {
+    width: 15rem;
+    height: 15rem;
+  }
+  img.dress {
+    width: 5rem;
+    height: 10rem;
+  }
+  img.cap {
+    width: 15rem;
+    height: 15rem;
+  }
+  img .jean {
+    width: 15rem;
+    height: 15rem;
+  }
+  img.top {
+    width: 15rem;
+    height: 15rem;
+    padding-bottom: 0.1rem;
+  }
+  img.style {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .flip-card {
+    width: 10rem;
+    height: 10rem;
+    margin-left: 7rem;
+  }
+  div.best {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img.dress {
+    width: 10rem;
+    height: 10rem;
+  }
+  img.top {
+    width: 10rem;
+    height: 10rem;
+  }
+  .card {
+    width: 15rem;
+    height: 20rem;
+  }
+  div.card-body {
+    height: 15rem;
+    margin-bottom: 3rem;
+  }
+  img.casses {
+    height: 25rem;
+    width: 45rem;
+    margin-top: 35rem;
+    margin-left: 5rem;
+  }
+  h2 {
+    margin-top: 2rem;
+    margin-left: 5rem;
+  }
+  img.style {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .flip-card {
+    height: 7rem;
+    width: 7rem;
+  }
+  div.best {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: wrap;
+  }
+  div.card-img-top {
+    width: 7rem;
+    height: 7rem;
+  }
 }
 </style>
