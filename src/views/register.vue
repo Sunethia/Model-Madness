@@ -7,7 +7,7 @@
         type="text"
         name="fullname"
         required
-        v-model="full_name"
+        v-model="fullname"
         placeholder="Full Name"
       />
       <input
@@ -28,18 +28,44 @@
       />
 
       <input
-        class="user-type"
+        class="userrole"
         type="text"
-        name="user_type"
+        name="userrole"
         required
-        v-model="user_type"
+        v-model="userrole"
         readonly
+        placeholder="User Role:"
       />
+      <input
+        class="phone_number"
+        type="text"
+        name="phone_number"
+        required
+        v-model="phone_number"
+        placeholder="Phone Number"
+      />
+      <input
+        class="join_date"
+        type="text"
+        name="join_date"
+        required
+        v-model="join_date"
+        placeholder="Join Date:"
+      />
+
+      <!-- <input
+        class="cart"
+        type="text"
+        name="cart"
+        required
+        v-model="cart"
+        placeholder="Cart"
+      /> -->
       <input class="form-btn" type="submit" value="Register" />
-      <hr />
+      <!-- <hr />
       <div class="form-extra">
         <router-link to="/">Already have an Account</router-link>
-      </div>
+      </div> -->
     </form>
     <div v-if="user">
       Welcome {{ user.fullname }}, Your sign up was successsul
@@ -58,6 +84,9 @@ export default {
       fullname: "",
       email: "",
       password: "",
+      userrole: "",
+      phone_number: "",
+      join_date: "",
     };
   },
   methods: {
@@ -66,6 +95,9 @@ export default {
         fullname: this.fullname,
         email: this.email,
         password: this.password,
+        userrole: this.userrole,
+        phone_number: this.phone_number,
+        join_date: this.join_date,
       });
     },
   },

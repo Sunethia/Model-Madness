@@ -8,8 +8,6 @@
       <li><a href="login">Login</a></li>
       <li><a href="admin">Admin</a></li>
       <li><a href="contact">Contact</a></li>
-      <!-- <i class="fa-solid fa-user"></i>
-      <i class="fa-solid fa-bag-shopping"><a href="Cart"></a></i> -->
     </ul>
   </div>
 </template>
@@ -41,11 +39,18 @@ a {
   font-size: 1rem;
   font-family: "Bangers";
 }
+
 li a:hover {
   background-color: rgb(40, 54, 24);
 }
-.active {
+li a.active {
   background-color: rgb(40, 54, 24);
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
 }
 i {
   font-size: 1.5rem;

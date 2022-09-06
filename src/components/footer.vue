@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col">
+    
         <i class="fa-brands fa-twitter">Model_madness</i>
         <i class="fa-brands fa-facebook">Model-madness</i>
         <i class="fa-regular fa-at">modelmadness@gmail.com</i>
         <i class="fa-brands fa-linkedin-in">model@madness</i>
         <i class="fa-solid fa-phone">021 952 8653</i>
-      </div>
+    
       <div class="col">
         <h1>Location</h1>
         <iframe
@@ -33,6 +33,7 @@ i {
   margin-top: 15rem;
   background-color: rgb(40, 75, 99);
   color: white;
+  margin-left: 2rem;
 }
 h1 {
   color: white;

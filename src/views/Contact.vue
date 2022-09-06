@@ -50,6 +50,10 @@ h1 {
   color: white;
   padding-bottom: 3rem;
   padding-top: 3rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: 30rem;
 }
 .title {
   margin-bottom: 10rem;

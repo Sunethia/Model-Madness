@@ -31,74 +31,60 @@
       </div>
     </div>
     <div class="reviews">
-      <h1>Reviews</h1>
-      <div class="person">
-        <div class="container">
-          <div class="container-inner">
-            <img class="circle" src="../assets/Chanique.jpg" />
-            <img class="img img2" src="" />
-          </div>
-        </div>
-        <div class="divider"></div>
-        <div class="name">Chanique Mansoor</div>
-        <div class="title">
-          I am so delighted in your clothing! It is absolutely
-          gorgeous...everything I have ordered FITS PERFECTLY...my fiance has
-          told me how beautiful I look in the outfits I have purchased, as well
-          as receiving many other compliments on the quality of your clothing
-          lines from friends and family! I am so happy I have found you...and I
-          will continue to purchase from you all! Thank you so very much!
+      <div class="card" style="width: 18rem">
+        <img src="../assets/Chanique.jpg" class="card-img-top" alt="chanique" />
+        <div class="card-body">
+          <p class="card-text">
+            *****Chanique Mansoor*****<br />
+            I am so delighted in your clothing! It is absolutely
+            gorgeous...everything I have ordered FITS PERFECTLY...my fiance has
+            told me how beautiful I look in the outfits I have purchased, as
+            well as receiving many other compliments on the quality of your
+            clothing lines from friends and family! I am so happy I have found
+            you...and I will continue to purchase from you all! Thank you so
+            very much!
+          </p>
         </div>
       </div>
-      <div class="person">
-        <div class="container">
-          <div class="container-inner">
-            <img class="circle" src="../assets/cammy.jpg" />
-          </div>
-        </div>
-        <div class="divider"></div>
-        <div class="name">Cameron Tamboer</div>
-        <div class="title">
-          I have ordered and received several items now, and I have to say, I am
-          in love with this store!!!! Everything I have received fit perfectly,
-          and is good quality. I ordered clothes in my size and they were true
-          to size! I would not hesitate to shop this site again, and I tell all
-          of my friends and family to shop this site too!
+      <div class="card" style="width: 18rem">
+        <img src="../assets/cammy.jpg" class="card-img-top" alt="cammy" />
+        <div class="card-body">
+          <p class="card-text">
+            *****Cameron Tamboer******<br />
+            I have ordered and received several items now, and I have to say, I
+            am in love with this store!!!! Everything I have received fit
+            perfectly, and is good quality. I ordered clothes in my size and
+            they were true to size! I would not hesitate to shop this site
+            again, and I tell all of my friends and family to shop this site
+            too!
+          </p>
         </div>
       </div>
-      <div class="person">
-        <div class="container">
-          <div class="container-inner">
-            <img class="circle" src="../assets/zach.jpg" />
-            <img class="img img2" src="" />
-          </div>
-        </div>
-        <div class="divider"></div>
-        <div class="name">Zachary Williams</div>
-        <div class="title">
-          I was reminiscing on what to get my fiance for her birthday. I came
-          down on this store and ordered a few items ,which i thought she might
-          like. I have received the items and she was over the moon about the
-          clothing and told me I have great style, so thank you for helping me
-          choose something special. Keep up the good work.
+      <div class="card" style="width: 18rem">
+        <img src="../assets/zach.jpg" class="card-img-top" alt="zach" />
+        <div class="card-body">
+          <p class="card-text">
+            *****Zachary Williams*****<br />
+            I was reminiscing on what to get my fiance for her birthday. I came
+            down on this store and ordered a few items ,which i thought she
+            might like. I have received the items and she was over the moon
+            about the clothing and told me I have great style, so thank you for
+            helping me choose something special. Keep up the good work.
+          </p>
         </div>
       </div>
-      <div class="person">
-        <div class="container">
-          <div class="container-inner">
-            <img class="circle" src="../assets/mary.jpg" />
-            <img class="img img2" src="" />
-          </div>
-        </div>
-        <div class="divider"></div>
-        <div class="name">Mary Poppins</div>
-        <div class="title">
-          I just received my shirts in TWO days I am incredibly happy with your
-          quickness and the beautiful clothes! I will be shopping through you
-          again in the very near future and will recommend you to everyone I
-          know! So very happy I found your website after hours of searching for
-          something stylish and festive for the holidays Thank you again Super
-          Happy :)
+      <div class="card" style="width: 18rem">
+        <img src="../assets/mary.jpg" class="card-img-top" alt="mary" />
+        <div class="card-body">
+          <p class="card-text">
+            *****Mary Poppins*****<br />
+            I just received my shirts in TWO days I am incredibly happy with
+            your quickness and the beautiful clothes! I will be shopping through
+            you again in the very near future and will recommend you to everyone
+            I know! So very happy I found your website after hours of searching
+            for something stylish and festive for the holidays Thank you again
+            Super Happy :)
+          </p>
         </div>
       </div>
     </div>
@@ -111,11 +97,27 @@
   height: 10rem;
 }
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 3rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 3rem;
   font-family: "Arsenal";
   color: white;
+  padding-left: 30rem;
+}
+.card {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:5rem
+}
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h3 {
@@ -230,7 +232,6 @@ body {
   margin-top: 4px;
 }
 /* media queries */
-@media (min-width:1200 ) and (max-width:1287px) {
-  
+@media (min-width: 1200) and (max-width: 1287px) {
 }
 </style>

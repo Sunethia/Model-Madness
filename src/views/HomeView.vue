@@ -11,14 +11,14 @@
                 <img
                   src="../assets/browndress.webp"
                   class="dress"
-                  style="width: 300px; height: 300px"
+                  style="width: 250px; height: 250px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
                   src="../assets/browndress2.webp"
                   class="dress"
-                  style="width: 300px; height: 300px"
+                  style="width: 250px; height: 250px"
                 />
               </div>
             </div>
@@ -31,14 +31,14 @@
                 <img
                   src="../assets/cap.webp"
                   class="cap"
-                  style="width: 300px; height: 300px"
+                  style="width: 250px; height: 250px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
                   src="../assets/cap2.webp"
                   class="cap"
-                  style="width: 300px; height: 300px"
+                  style="width: 250px; height: 250px"
                 />
               </div>
             </div>
@@ -51,14 +51,14 @@
                 <img
                   src="../assets/highwaist.webp"
                   class="jean"
-                  style="width: 300px; height: 300px"
+                  style="width: 250px; height: 250px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
                   src="../assets/highwaist2.webp"
                   class="jean"
-                  style="width: 300px; height: 300px"
+                  style="width: 250px; height: 250px"
                 />
               </div>
             </div>
@@ -71,14 +71,14 @@
                 <img
                   src="../assets/top.webp"
                   class="top"
-                  style="width: 300px; height: 300px"
+                  style="width: 250px; height: 250px"
                 />
               </div>
               <div class="flip-card-back">
                 <img
                   src="../assets/top2.webp"
                   class="top"
-                  style="width: 300px; height: 300px"
+                  style="width: 250px; height: 250px"
                 />
               </div>
             </div>
@@ -89,7 +89,7 @@
     <div class="sale">
       <div class="row">
         <div class="col">
-          <div class="card" style="width: 30rem">
+          <div class="card">
             <img
               src="../assets/bluejersey.webp"
               class="card-img-top"
@@ -104,7 +104,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="card" style="width: 30rem">
+          <div class="card">
             <img
               src="../assets/browndressboobtube.webp"
               class="card-img-top"
@@ -197,7 +197,7 @@ h1 {
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: "Arsenal";
+  font-family: "Combo", cursive;
 
   margin-left: 25rem;
 }
@@ -275,6 +275,7 @@ h2 {
   font-size: 2rem;
   color: white;
 }
+
 /* Flip card css */
 .flip-card {
   background-color: transparent;
@@ -339,82 +340,331 @@ h2 {
     width: 15rem;
     height: 15rem;
   }
-  img.dress {
-    width: 5rem;
-    height: 10rem;
-  }
-  img.cap {
+  .dress {
     width: 15rem;
     height: 15rem;
   }
-  img .jean {
+  .cap {
     width: 15rem;
     height: 15rem;
   }
-  img.top {
+  .jean {
     width: 15rem;
     height: 15rem;
-    padding-bottom: 0.1rem;
   }
-  img.style {
-    margin-top: 2rem;
-  }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  .flip-card {
-    width: 10rem;
-    height: 10rem;
-    margin-left: 7rem;
-  }
-  div.best {
-    display: flex;
-    flex-direction: column;
+  .top {
+    width: 15rem;
+    height: 15rem;
   }
 
-  img.dress {
-    width: 10rem;
-    height: 10rem;
-  }
-  img.top {
-    width: 10rem;
-    height: 10rem;
-  }
-  .card {
-    width: 15rem;
+  img.card-img-top {
+    width: 20rem;
     height: 20rem;
   }
-  div.card-body {
-    height: 15rem;
-    margin-bottom: 3rem;
+  .card-body {
+    width: 20rem;
   }
-  img.casses {
+  .casses {
+    width: 25rem;
     height: 25rem;
-    width: 45rem;
-    margin-top: 35rem;
-    margin-left: 5rem;
+    margin-top: 5rem;
   }
-  h2 {
-    margin-top: 2rem;
-    margin-left: 5rem;
+  .style {
+    width: 13rem;
+    height: 13rem;
   }
-  img.style {
+}
+@media (min-width: 1100px) and (max-width: 1200px) {
+  .flip-card {
+    width: 10rem;
+    height: 10rem;
+  }
+  .dress {
+    width: 10rem;
+    height: 10rem;
+  }
+  .cap {
+    width: 10rem;
+    height: 10rem;
+  }
+  .jean {
+    width: 10rem;
+    height: 10rem;
+  }
+  .top {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .card-img-top {
+    width: 15rem;
+    height: 15rem;
+  }
+  .card-body {
+    width: 15rem;
+  }
+  .casses {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 5rem;
+  }
+  .style {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .flip-card {
+    width: 10rem;
+    height: 10rem;
+  }
+  .dress {
+    width: 10rem;
+    height: 10rem;
+  }
+  .cap {
+    width: 10rem;
+    height: 10rem;
+  }
+  .jean {
+    width: 10rem;
+    height: 10rem;
+  }
+  .top {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .card-img-top {
+    width: 15rem;
+    height: 15rem;
+  }
+  .card-body {
+    width: 15rem;
+  }
+  .casses {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 5rem;
+  }
+  .style {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1000px) {
+  .flip-card {
+    width: 10rem;
+    height: 10rem;
+  }
+  .dress {
+    width: 10rem;
+    height: 10rem;
+  }
+  .cap {
+    width: 10rem;
+    height: 10rem;
+  }
+  .jean {
+    width: 10rem;
+    height: 10rem;
+  }
+  .top {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .card-img-top {
+    width: 15rem;
+    height: 15rem;
+  }
+  .card-body {
+    width: 15rem;
+  }
+  .casses {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 5rem;
+  }
+  .style {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .flip-card {
+    width: 10rem;
+    height: 10rem;
+  }
+  .dress {
+    width: 10rem;
+    height: 10rem;
+  }
+  .cap {
+    width: 10rem;
+    height: 10rem;
+  }
+  .jean {
+    width: 10rem;
+    height: 10rem;
+  }
+  .top {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .card-img-top {
+    width: 15rem;
+    height: 15rem;
+  }
+  .card-body {
+    width: 15rem;
+  }
+  .casses {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 5rem;
+  }
+  .style {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+@media (min-width: 700px) and (max-width: 800px) {
+  .flip-card {
+    width: 8rem;
+    height: 8rem;
+  }
+  .dress {
+    width: 8rem;
+    height: 8rem;
+  }
+  .cap {
+    width: 8rem;
+    height: 8rem;
+  }
+  .jean {
+    width: 8rem;
+    height: 8rem;
+  }
+  .top {
+    width: 8rem;
+    height: 8rem;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+  .card-title {
+    font-size: 2rem;
+  }
+  .card-img-top {
+    width: 10rem;
+    height: 10rem;
+  }
+  .card-body {
+    width: 10rem;
+  }
+  .casses {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 3rem;
+  }
+  .h2 {
+    margin-bottom: 2rem;
+  }
+  .style {
+    width: 10rem;
+    height: 10rem;
     margin-top: 2rem;
   }
 }
-@media (min-width: 800px) and (max-width: 1000px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .flip-card {
-    height: 7rem;
-    width: 7rem;
+    width: 5rem;
+    height: 5rem;
   }
-  div.best {
+  /* .dress {
+    width: 5rem;
+    height: 5rem;
+  }
+  .cap {
+    width: 5rem;
+    height: 5rem;
+  }
+  .jean {
+    width: 5rem;
+    height: 5rem;
+  }
+  .top {
+    width: 5rem;
+    height: 5rem;
+  } */
+  .card-text {
+    font-size: 1rem;
+  }
+  .card-img-top {
+    width: 10rem;
+    height: 10rem;
+  }
+  .card-body {
+    width: 10rem;
+  }
+  .casses {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2.5rem;
+  }
+  .style {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media (min-width: 400px) and (max-width: 600px) {
+  .flip-card {
+    width: 10rem;
+    height: 10rem;
+  }
+  .dress {
+    width: 7rem;
+    height: 7rem;
+  }
+  .cap {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .top {
+    width: 7rem;
+    height: 7rem;
+  }
+  .h1 {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: wrap;
+    margin-right: 5rem;
   }
-  div.card-img-top {
-    width: 7rem;
-    height: 7rem;
+  .jean {
+    padding-top: 4rem;
+  }
+  .card-img-top {
+    width: 10rem;
+    height: 10rem;
+  }
+  .card-body {
+    width: 10rem;
+  }
+  .casses {
+    width: 15rem;
+    height: 15rem;
+    margin-top: 5rem;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card-text{
+    font-size: 1rem;
+  }
+  .style {
+    width: 13rem;
+    height: 13rem;
   }
 }
 </style>
