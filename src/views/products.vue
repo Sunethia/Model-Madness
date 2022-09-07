@@ -1,9 +1,14 @@
 <template>
   <button @click="change1">tops</button>
+  <div v-if="user">
+    <router-link to="/profile">
+      <p class="profile-name">{{ user.fullname }}</p>
+    </router-link>
+  </div>
   <div v-if="products" class="prods">
     <productsCard
       class="card"
-      v-for="product in filteredproducts"
+      v-for="product of filteredproducts"
       :key="product.id"
       :product="product"
     />
@@ -12,7 +17,6 @@
 <script>
 import productsCard from "../components/productsCard.vue";
 export default {
-  components: { productsCard },
   data() {
     return {
       search: "",
@@ -20,6 +24,12 @@ export default {
     };
   },
   computed: {
+    products() {
+      return this.$store.state.products;
+    },
+    user() {
+      return this.$store.state.user;
+    },
     filteredproducts() {
       return this.$store.state.products?.filter((product) => {
         return product.category
@@ -27,10 +37,8 @@ export default {
           .includes(this.search.toLowerCase());
       });
     },
-    products() {
-      return this.$store.state.products;
-    },
   },
+  components: { productsCard },
   mounted() {
     this.$store.dispatch("getproducts");
   },
@@ -76,5 +84,9 @@ h1 {
 .profile {
   border: 1px solid black;
   height: 500px;
+}
+.profile-name {
+  border: 1px solid white;
+  font-size: 2rem;
 }
 </style>

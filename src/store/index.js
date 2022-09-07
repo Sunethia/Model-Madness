@@ -3,7 +3,7 @@ import router from "../router/index";
 export default createStore({
   state: {
     users: null,
-    user: null,
+    user: null || JSON.parse(localStorage.getItem("users")),
     token: null,
     products: null,
     product: null,
@@ -26,8 +26,9 @@ export default createStore({
     setusers: (state, users) => {
       state.users = users;
     },
-    setser: (state, user) => {
+    setuser: (state, user) => {
       state.user = user;
+      localStorage.setItem("users", JSON.stringify(user));
     },
     setproducts: (state, products) => {
       state.products = products;
@@ -148,38 +149,38 @@ export default createStore({
         .then((res) => res.json())
         .then((products) => context.commit("setproducts", products));
     },
-  },
-  getproduct: async (context, id) => {
-    fetch("https://model-madness.herokuapp.com/products/" + id)
-      .then((res) => res.json())
-      .then((product) => context.commit("setproduct", product[0]));
-  },
-  deleteProduct: async (context, id) => {
-    fetch("https://model-madness.herokuapp.com/products/" + id, {
-      method: "DELETE",
-    }).then(() => context.dispatch("getproducts"));
-  },
-  createProduct: async (context, product) => {
-    fetch("https://model-madness.herokuapp.com/products/", {
-      method: "POST",
-      body: JSON.stringify(product),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then(() => context.dispatch("getproducts"));
-  },
-  updateProduct: async (context, product) => {
-    fetch("https://model-madness.herokuapp.com/products/" + product.id, {
-      method: "PUT",
-      body: JSON.stringify(product),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then(() => context.dispatch("getproducts"));
+    getproduct: async (context, id) => {
+      fetch("https://model-madness.herokuapp.com/products/" + id)
+        .then((response) => response.json())
+        .then((product) => context.commit("setproduct", product[0]));
+    },
+    deleteProduct: async (context, id) => {
+      fetch("https://model-madness.herokuapp.com/products/" + id, {
+        method: "DELETE",
+      }).then(() => context.dispatch("getproducts"));
+    },
+    createProduct: async (context, product) => {
+      fetch("https://model-madness.herokuapp.com/products/", {
+        method: "POST",
+        body: JSON.stringify(product),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then(() => context.dispatch("getproducts"));
+    },
+    updateProduct: async (context, product) => {
+      fetch("https://model-madness.herokuapp.com/products/" + product.id, {
+        method: "PUT",
+        body: JSON.stringify(product),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then(() => context.dispatch("getproducts"));
+    },
   },
 
   modules: {},
