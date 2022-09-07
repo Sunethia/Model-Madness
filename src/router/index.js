@@ -37,11 +37,11 @@ const routes = [
     name: "login",
     component: () => import("../views/login.vue"),
   },
-  {
-    path: "/admin",
-    name: "admin",
-    component: () => import("../views/Admin.vue"),
-  },
+  // {
+  //   path: "/admin",
+  //   name: "admin",
+  //   component: () => import("../views/Admin.vue"),
+  // },
   {
     path: "/contact",
     name: "contact",
