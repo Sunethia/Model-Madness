@@ -1,13 +1,22 @@
 <template>
   <div class="container">
     <div class="row">
-    
-        <i class="fa-brands fa-twitter">Model_madness</i>
-        <i class="fa-brands fa-facebook">Model-madness</i>
-        <i class="fa-regular fa-at">modelmadness@gmail.com</i>
-        <i class="fa-brands fa-linkedin-in">model@madness</i>
-        <i class="fa-solid fa-phone">021 952 8653</i>
-    
+      <div class="col">
+        <i class="fa-brands fa-twitter"
+          ><a href="https://twitter.com/?lang=en"></a>--Model_madness</i
+        >
+        <i class="fa-brands fa-facebook"
+          ><a href="https://www.facebook.com/"></a>--Model-madness</i
+        >
+        <i class="fa-regular fa-at"
+          ><a href="https://support.google.com/mail/answer/56256?hl=en"></a
+          >--modelmadness@gmail.com</i
+        >
+        <i class="fa-brands fa-linkedin-in"
+          ><a href="https://www.linkedin.com/home"></a>--model@madness</i
+        >
+        <i class="fa-solid fa-phone">--021 952 8653</i>
+      </div>
       <div class="col">
         <h1>Location</h1>
         <iframe
@@ -26,11 +35,11 @@
 <script>
 export default {};
 </script>
-<style>
+<style scoped>
 i {
   display: flex;
   align-items: flex-start;
-  margin-top: 15rem;
+  margin-right: 2rem;
   background-color: rgb(40, 75, 99);
   color: white;
   margin-left: 2rem;
@@ -39,5 +48,19 @@ h1 {
   color: white;
   padding-top: 10rem;
   margin-right: 30rem;
+}
+.row {
+  display: flex;
+  width: 100%;
+}
+.col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  background-color: rgb(40, 75, 99);
 }
 </style>

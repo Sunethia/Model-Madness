@@ -1,4 +1,17 @@
 <template>
+  <!-- <nav>
+    <router-link to="/">Home</router-link>
+    <router-link to="about">About</router-link>
+    <router-link to="products">Products</router-link>
+    <router-link to="register">Register</router-link>
+    <router-link to="login">Login</router-link>
+    <router-link to="admin">Admin</router-link>
+    <router-link to="contact">Contact</router-link>
+    <router-link to="/profile">
+      <i class="fa-solid fa-user"></i>
+      <p class="profile-name">{{ user.fullname }}</p>
+    </router-link>
+  </nav> -->
   <div class="navbar">
     <ul>
       <li><a href="/">Home</a></li>
@@ -8,11 +21,27 @@
       <li><a href="login">Login</a></li>
       <li><a href="admin">Admin</a></li>
       <li><a href="contact">Contact</a></li>
+      <!-- <li>
+        <a href="profile"> <i class="fa-solid fa-user"></i></a>
+      </li> -->
+      <!-- <li v-if="user">
+        <a href="profile"></a>
+          <i class="fa-solid fa-user"></i><P>{{ user.fullname }}</P></a
+        >
+      </li> -->
+
+      <!-- <div v-if="user">
+        <router-link to="/profile">
+          <p class="profile-name">{{ user.fullname }}</p>
+        </router-link>
+      </div> -->
     </ul>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "navbar",
+};
 </script>
 <style>
 .navbar {

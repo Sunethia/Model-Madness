@@ -1,89 +1,22 @@
 <template>
   <div class="home">
     <h1>Welcome to Model-madness!</h1>
-    <div class="best">
-      <h1>Best Sellers for Last Week</h1>
-      <div class="row">
-        <div class="col">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img
-                  src="../assets/browndress.webp"
-                  class="dress"
-                  style="width: 250px; height: 250px"
-                />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="../assets/browndress2.webp"
-                  class="dress"
-                  style="width: 250px; height: 250px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img
-                  src="../assets/cap.webp"
-                  class="cap"
-                  style="width: 250px; height: 250px"
-                />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="../assets/cap2.webp"
-                  class="cap"
-                  style="width: 250px; height: 250px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img
-                  src="../assets/highwaist.webp"
-                  class="jean"
-                  style="width: 250px; height: 250px"
-                />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="../assets/highwaist2.webp"
-                  class="jean"
-                  style="width: 250px; height: 250px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img
-                  src="../assets/top.webp"
-                  class="top"
-                  style="width: 250px; height: 250px"
-                />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="../assets/top2.webp"
-                  class="top"
-                  style="width: 250px; height: 250px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="container">
+      <div class="box">
+        <img src="../assets/top.webp" />
+        <span>Sexy top</span>
+      </div>
+      <div class="box">
+        <img src="../assets/cap.webp" />
+        <span>Fashionable caps</span>
+      </div>
+      <div class="box">
+        <img src="../assets/silverdress.webp" />
+        <span>Sexy Formal dresses</span>
+      </div>
+      <div class="box">
+        <img src="../assets/e.jpg" />
+        <span>Bag for every occasion</span>
       </div>
     </div>
     <div class="sale">
@@ -187,6 +120,8 @@ a {
 }
 .card {
   margin-bottom: 3rem;
+  width: 15rem;
+  height: 30rem;
 }
 .card-body {
   height: 15rem;
@@ -198,7 +133,8 @@ h1 {
   align-items: center;
   color: white;
   font-family: "Combo", cursive;
-
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   margin-left: 25rem;
 }
 h2 {
@@ -230,10 +166,12 @@ h2 {
   background-color: black;
 }
 .sale {
+  height: 50rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  margin-bottom: 20px;
 }
 .sale:hover {
   background-color: black;
@@ -262,7 +200,10 @@ h2 {
   background-color: black;
 }
 .top {
-  box-shadow: 5px 5px 5px 5px black;
+  box-shadow: 5px 5px 5px 5px #000000;
+  width: 15rem;
+
+  height: auto;
 }
 .top:hover {
   background-color: black;
@@ -274,6 +215,52 @@ h2 {
 .card-text {
   font-size: 2rem;
   color: white;
+}
+.card-img-top {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  object-position: top;
+}
+/* home */
+.container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover {
+  flex: 1 1 50%;
+}
+.box:hover > img {
+  width: 100%;
+  height: 100%;
 }
 
 /* Flip card css */
@@ -333,9 +320,10 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+/* home page */
 
 /* media queries */
-@media (min-width: 1200px) and (max-width: 1286px) {
+/* @media (min-width: 1200px) and (max-width: 1286px) {
   .flip-card {
     width: 15rem;
     height: 15rem;
@@ -451,7 +439,7 @@ h2 {
     width: 13rem;
     height: 13rem;
   }
-}
+} */
 @media (min-width: 900px) and (max-width: 1000px) {
   .flip-card {
     width: 10rem;
@@ -659,7 +647,7 @@ h2 {
   .card-title {
     font-size: 1.5rem;
   }
-  .card-text{
+  .card-text {
     font-size: 1rem;
   }
   .style {
