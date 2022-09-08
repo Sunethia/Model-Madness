@@ -1,7 +1,7 @@
 <template>
   <!-- <router-link
-    class="product_box"
-    :to="{ name: 'productDetails', params: { id: user.id } }"
+    class="adminusers"
+    :to="{ name: 'userDetails', params: { id: user.id } }"
   > -->
   <div class="card">
     <img class="user_imgURL" :src="user.email" />

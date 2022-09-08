@@ -6,6 +6,7 @@
     <div class="card">
       <img class="product_imgURL" :src="product.imgURL" />
       <p class="product_title">{{ product.title }}</p>
+      <button>Add to cart</button>
     </div>
   </router-link>
 </template>

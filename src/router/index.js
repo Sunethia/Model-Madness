@@ -42,10 +42,20 @@ const routes = [
     name: "admin",
     component: () => import("../views/Admin.vue"),
   },
-   {
+  {
     path: "/contact",
     name: "contact",
     component: () => import("../views/Contact.vue"),
+  },
+  {
+    path: "/cart",
+    name: "cart",
+    component: () => import("../views/Cart.vue"),
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: () => import("../views/Profile.vue"),
   },
 ];
 

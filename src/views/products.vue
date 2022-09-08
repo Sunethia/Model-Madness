@@ -1,10 +1,10 @@
 <template>
   <button @click="change1">tops</button>
-  <div v-if="user">
+  <!-- <div v-if="user">
     <router-link to="/profile">
       <p class="profile-name">{{ user.fullname }}</p>
     </router-link>
-  </div>
+  </div> -->
   <div v-if="products" class="prods">
     <productsCard
       class="card"
@@ -81,12 +81,12 @@ h1 {
   height: 170px;
   width: 200px;
 }
-.profile {
+/* .profile {
   border: 1px solid black;
   height: 500px;
 }
 .profile-name {
   border: 1px solid white;
   font-size: 2rem;
-}
+} */
 </style>
