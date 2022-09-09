@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
+
 const routes = [
   {
     path: "/",
@@ -18,9 +19,15 @@ const routes = [
     component: () => import("../views/products.vue"),
   },
   {
+    path: "/usersTable",
+    name: "user table",
+    component: () => import("../views/usersTable.vue"),
+  },
+  {
     path: "/products/:id",
     name: "productDetails",
     component: () => import("../views/productDetails.vue"),
+    props: true
   },
   {
     path: "/profile",

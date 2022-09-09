@@ -179,4 +179,11 @@ hr {
 a {
   margin-top: 5rem;
 }
+
+/* media queries */
+@media (min-width: 300px) and (max-width: 400px) {
+ .form {
+  padding-left:2px;
+ }
+}
 </style>

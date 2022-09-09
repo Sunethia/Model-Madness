@@ -1,12 +1,22 @@
 <template>
+  <tr>
+    <td>{{ user.id }}</td>
+    <td>{{ user.fullname }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.password }}</td>
+    <td>{{ user.userrole }}</td>
+    <td>{{ user.phone_number }}</td>
+    <td>{{ user.join_date }}</td>
+    <td>{{ user.cart }}</td>
+  </tr>
   <!-- <router-link
     class="adminusers"
     :to="{ name: 'userDetails', params: { id: user.id } }"
   > -->
-  <div class="card">
+  <!-- <div class="card">
     <img class="user_imgURL" :src="user.email" />
     <p class="product_title">{{ user.fullname }}</p>
-  </div>
+  </div> -->
   <!-- </router-link> -->
 </template>
 <script>

@@ -1,13 +1,12 @@
 <template>
-  <router-link
-    class="product_box"
-    :to="{ name: 'productDetails', params: { id: product.id } }"
-  >
-    <div class="card">
-      <img class="product_imgURL" :src="product.imgURL" />
-      <p class="product_title">{{ product.title }}</p>
-    </div>
-  </router-link>
+  <tr>
+    <td>{{ product.id }}</td>
+    <td>{{ product.tilte }}</td>
+    <td>{{ product.category }}</td>
+    <td>{{ product.description }}</td>
+    <td><img :src="product.imgURL" class="img-fluid" id="admin-img" /></td>
+    <td>{{ product.price }}</td>
+  </tr>
 </template>
 <script>
 export default {
@@ -15,6 +14,11 @@ export default {
 };
 </script>
 <style>
+#admin-img {
+  height: 6em;
+  width: 6em;
+}
+
 .card {
   box-shadow: 5px 5px 5px 5px black;
   border-radius: 10px;

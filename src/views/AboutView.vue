@@ -112,7 +112,16 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom:5rem
+  margin-bottom: 5rem;
+}
+.card-img-top {
+  width: 12rem;
+  border: 2px 2px 2px 2px 2px black;
+  height: 20rem;
+}
+.card-body {
+  width: 12rem;
+  height: 35rem;
 }
 .reviews {
   display: flex;
@@ -232,6 +241,72 @@ body {
   margin-top: 4px;
 }
 /* media queries */
-@media (min-width: 1200) and (max-width: 1287px) {
+@media (min-width: 900px) and (max-width: 1080px) {
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 700px) and (max-width: 900px) {
+  h1 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 600px) and (max-width: 700px) {
+  h1 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 500px) and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+  .reviews {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  h1 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .reviews {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  h1 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .reviews {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 200px) and (max-width: 300px) {
+  h1 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .reviews {
+    flex-wrap: wrap;
+  }
 }
 </style>

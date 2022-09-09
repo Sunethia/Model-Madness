@@ -1,26 +1,49 @@
 <template>
-  <button @click="change1">tops</button>
-  <!-- <div v-if="user">
+  <form class="filters">
+    <button @click="sort">Sort</button>
+    <select name="" class="inp" v-model="category">
+      <label>Sort By Catergory</label>
+      <option value="All" selected>All</option>
+      <option value="Tops">Tops</option>
+      <option value="dresses">Dresses</option>
+      <option value="bottoms">Bottoms</option>
+      <option value="shoes">Shoes</option>
+      <option value="Accessories">Accessories</option>
+    </select>
+    <input type="text" v-model="search" placeholder="search..." class="inp" />
+    {{ search }}
     <router-link to="/profile">
-      <p class="profile-name">{{ user.fullname }}</p>
+      <div class="user" v-if="user">
+        <i class="fa-solid fa-user"></i>
+        <div class="profile-name">
+          <h2>{{ user.full_name }}</h2>
+        </div>
+      </div>
     </router-link>
-  </div> -->
-  <div v-if="products" class="prods">
-    <productsCard
-      class="card"
-      v-for="product of filteredproducts"
+    <router-link to="/cart">
+      <div class="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h2>Cart</h2>
+      </div>
+    </router-link>
+  </form>
+  <div class="prods">
+    <productcard
+      v-for="product in products"
       :key="product.id"
       :product="product"
+      class="card"
     />
   </div>
 </template>
 <script>
-import productsCard from "../components/productsCard.vue";
+import productcard from "../components/productcard";
 export default {
   data() {
     return {
       search: "",
-      // products: [],
+      price: "All",
+      category: "All",
     };
   },
   computed: {
@@ -30,28 +53,31 @@ export default {
     user() {
       return this.$store.state.user;
     },
+  },
+  methods: {
+    sort() {
+      this.$store.commit("sortByPrice");
+    },
     filteredproducts() {
       return this.$store.state.products?.filter((product) => {
-        return product.category
-          ?.toLowerCase()
-          .includes(this.search.toLowerCase());
+        let isMatch = true;
+        if (!product.name.toLowerCase().includes(this.search.toLowerCase()))
+          isMatch = false;
+        if (this.category !== "All" && product.category !== this.category)
+          isMatch = false;
+        return isMatch;
       });
     },
   },
-  components: { productsCard },
+  methods: {
+    sortPrice() {
+      this.$store.commit("sortproductsByPrice");
+    },
+  },
+  components: { productcard },
   mounted() {
     this.$store.dispatch("getproducts");
-  },
-  methods: {
-    Change1() {
-      this.search = "tops";
-    },
-    Change2() {
-      this.search = "bottoms";
-    },
-    Change3() {
-      this.search = "accessories";
-    },
+    // this.$store.dispatch("getUser");
   },
 };
 </script>

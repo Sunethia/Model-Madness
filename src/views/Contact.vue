@@ -53,7 +53,6 @@ h1 {
   display: flex;
   align-content: center;
   justify-content: center;
-  margin-left: 30rem;
 }
 .title {
   margin-bottom: 10rem;
@@ -108,7 +107,11 @@ input {
     width: 250px;
   }
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  .button {
+    font-size:2rem;
   }
 }
 </style>

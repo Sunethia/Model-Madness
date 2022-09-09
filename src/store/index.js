@@ -41,21 +41,55 @@ export default createStore({
     },
   },
   actions: {
+    //users
+    getusers: async (context) => {
+      fetch("https://model-madness.herokuapp.com/users")
+        .then((res) => res.json())
+        .then((users) => context.commit("setusers", users));
+    },
+
     //cart
-    getCart: async (context) => {
-      fetch(`https://model-madness.herokuapp.com/products`)
+    getcart: (context, id) => {
+      if (context.state.user === null) {
+        alert("Please Login");
+      } else {
+        id = context.state.user.user_id;
+        fetch("https://model-madness.herokuapp.com/users/" + id + "/cart", {
+          // fetch("https://model-madness.herokuapp.com/users/" + id + "/cart", {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            "x-auth-token": context.state.token,
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            // console.log(data)
+            context.commit("setcart", data);
+          });
+      }
+    },
+
+    addTocart: async (context, product, id) => {
+      console.log(product.product_id);
+      id = context.state.user.user_id;
+      // console.log(product);
+      await fetch("https://model-madness.herokuapp.com/users/" + id + "/cart", {
+        // await fetch("https://model-madness.herokuapp.com/users/" + id + "/cart", {
+        method: "POST",
+        body: JSON.stringify({
+          product_id: product.product_id,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          "x-auth-token": context.state.token,
+        },
+      })
         .then((res) => res.json())
         .then((data) => {
-          if (data.length === 0) {
-            console.log(data);
-          } else {
-            context.commit("setProducts", data);
-            // console.log(data);
-          }
+          console.log(data);
+          context.dispatch("getcart", id);
         });
-    },
-    addToCart: async (context, id) => {
-      console.log(id);
     },
     deleteFromCart: async (context, id) => {
       const newCart = context.state.cart.filter((product) => product.id != id);
@@ -181,6 +215,15 @@ export default createStore({
         .then((response) => response.json())
         .then(() => context.dispatch("getproducts"));
     },
+  },
+  sortProductByPrice: (state) => {
+    state.products.sort((a, b) => {
+      return a.price - b.price;
+    });
+    if (!state.asc) {
+      state.products.reverse();
+    }
+    state.asc = !state.asc;
   },
 
   modules: {},

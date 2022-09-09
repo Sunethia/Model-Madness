@@ -126,7 +126,9 @@ a {
 .card-body {
   height: 15rem;
 }
-
+.card-text {
+  background-color: rgb(40, 75, 99);
+}
 h1 {
   display: flex;
   justify-content: center;
